@@ -1,12 +1,16 @@
-package test;
+﻿package test;
 
 import domain.Exercise;
-
+/** Содержит реализацию метода*/
 public class TestResult {
-
+    /** Вывод на экран подсчёта Числа Судьбы*/
     public static void main(String[] args) {
-
-        int R=10;
-        System.out.println("Area of a circle for R="+R+"m is "+Exercise.Calculate(R)+"m"+'\u00B2');
+        byte d = 24;
+        byte m = 5;
+        short y = 1990;
+        if(Exercise.Calculate(d, m, y) != -1)
+            System.out.println("Date: "+d+'.'+m+'.'+y+" Your Fate Day: "+Exercise.Calculate(d, m, y));
+        else
+            System.out.println("Wrong date input");
     }
 }
